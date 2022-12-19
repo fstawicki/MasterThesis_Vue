@@ -1,44 +1,49 @@
 
 
+
 <template>
   <div class="container">
     <div class="logo" />
     <h1 class="title">Vue Testing App</h1>
     <div class="render_div">
-      <button class="btn" @click="renderElements">Render 1000</button>
-      <button class="btn" @click="renderElements">Render 10000</button>
-      <button class="btn" @click="renderElements">Render 25000</button>
-      <button class="btn" @click="renderElements">Render 50000</button>
+      <button class="btn" @click="renderElements(1000)">Render 1000</button>
+      <button class="btn" @click="renderElements(10000)">Render 10000</button>
+      <button class="btn" @click="renderElements(25000)">Render 25000</button>
+      <button class="btn" @click="renderElements(50000)">Render 50000</button>
     </div>
         <button class="btn">Copy Array</button>
         <button class="btn">Edit Elements</button>
         <button class="btn">Delete Elements</button>
     <div class="line" />
-    <ul class="list" v-for="element in array1" v-bind:key="element">
+    <ul class="list" v-for="element in array" v-bind:key="element">
       <li>{{element}}</li>
     </ul>
   </div>
 </template>
+
+
 
 <script>
   export default {
     name: 'App',
     data(){
       return {
-        array1: [1,2,3,4,5]
+        array: [],
+        coppiedArray: []
       }
     },
     methods: {
       renderElements(number){
         console.log('test');
-        // for(let i=0; i<number;i++){
-        //   array1[i] = `Element nr: ${i+1}`
-        // }
+        for(let i=0; i<number;i++){
+          this.array[i] = `Element nr: ${i+1}`
+        }
 
       }
     }
   }
 </script>
+
 
 <style lang="scss">
 *{
