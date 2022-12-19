@@ -11,7 +11,7 @@
     </div>
         <button class="btn" @click="copyArray">Copy Array</button>
         <button class="btn" @click="editArray">Edit Elements</button>
-        <button class="btn">Delete Elements</button>
+        <button class="btn" @click="deleteArray">Delete Elements</button>
     <div class="line" />
     <ul class="list" v-for="element in array" v-bind:key="element">
       <li>{{element}}</li>
@@ -45,6 +45,10 @@
         for(let i=0; i<this.array.length;i++){
           this.array[i] = this.array[i] + '+ edited'
         }
+      },
+      deleteArray(){
+        this.array.length = 0;
+        console.log(this.array);
       }
     }
   }
@@ -81,9 +85,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   text-align: center;
-
   background-color: #3c676a;
 }
 
