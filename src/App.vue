@@ -1,6 +1,4 @@
 
-
-
 <template>
   <div class="container">
     <div class="logo" />
@@ -21,8 +19,6 @@
   </div>
 </template>
 
-
-
 <script>
   export default {
     name: 'App',
@@ -34,21 +30,18 @@
     },
     methods: {
       renderElements(number){
-        console.log('test');
         for(let i=0; i<number;i++){
           this.array[i] = `Element nr: ${i+1}`
         }
 
       },
       copyArray(){
-        console.log('copied');
         for(let i=0; i<this.array.length;i++){
           this.coppiedArray[i] = this.array[i];
         }
         console.log(this.coppiedArray)
       },
       editArray(){
-        console.log('aaa');
         for(let i=0; i<this.array.length;i++){
           this.array[i] = this.array[i] + '+ edited'
         }
