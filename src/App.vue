@@ -11,8 +11,8 @@
       <button class="btn" @click="renderElements(25000)">Render 25000</button>
       <button class="btn" @click="renderElements(50000)">Render 50000</button>
     </div>
-        <button class="btn">Copy Array</button>
-        <button class="btn">Edit Elements</button>
+        <button class="btn" @click="copyArray">Copy Array</button>
+        <button class="btn" @click="editArray">Edit Elements</button>
         <button class="btn">Delete Elements</button>
     <div class="line" />
     <ul class="list" v-for="element in array" v-bind:key="element">
@@ -39,6 +39,19 @@
           this.array[i] = `Element nr: ${i+1}`
         }
 
+      },
+      copyArray(){
+        console.log('copied');
+        for(let i=0; i<this.array.length;i++){
+          this.coppiedArray[i] = this.array[i];
+        }
+        console.log(this.coppiedArray)
+      },
+      editArray(){
+        console.log('aaa');
+        for(let i=0; i<this.array.length;i++){
+          this.array[i] = this.array[i] + '+ edited'
+        }
       }
     }
   }
