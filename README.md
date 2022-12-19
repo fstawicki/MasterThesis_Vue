@@ -1,16 +1,5 @@
-# vue_praca_magisterska
+# Testing Vue App
 
-## Project setup
-```
-npm install
-```
+⭐ ⭐ ⭐
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
+Created as a part of master's thesis project which aim was a comparative analysis of JavaScript frontend frameworks - Angular, React and Vue.
